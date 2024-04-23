@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kings Capital</title>
+    <link rel="shortcut icon" href="imgs/king-capital.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body class="font-poppins bg-slate-100 ">
+    <header id="header" class="relative flex justify-between p-8 lg:px-60 items-center">
+        <!-- coming from main.js -->
+    </header>
+
+    <main class="mw-screen overflow-x-hidden ">
+       <!-- hero section -->
+       <section id="hero" class=" relative  flex flex-col justify-center items-start overflow-hidden py-20 sm:py-44 lg:px-60 px-5 bg-gradient-to-tr from-teal-800 to-themeColor">
+            
+        <h1 class="text-white lg:text-6xl text-5xl font-semibold z-50 text-center w-full flex gap-5 flex-col">
+            <span>OUR SERVICES</span>
+        </h1>
+
+        <video autoplay loop muted src="imgs/video.mp4" class="absolute top-0 left-0 object-cover w-screen h-full mix-blend-multiply"></video>
+
+    </section>
+
+    
+        <!-- services section -->
+        <section id="services" class="my-10 flex flex-col md:gap-10 gap-5 justify-center items-center px-5 sm:px-0">
+           
+            <div id="services-inner-container" class=" grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 px-5 xl:px-80 w-screen">
+                <script>
+                    const servicesArray =[
+                        {
+                            imgUrl:'imgs/budget.png',
+                            title:'Financial Planning',
+                            text:'Personalized strategies for your financial goals.'
+                        },
+                        {
+                            imgUrl:'imgs/invest.png',
+                            title:'Investment Management',
+                            text:'Maximizing returns, minimizing risk.'
+                        },
+                        {
+                            imgUrl:'imgs/contribute.png',
+                            title:'Retirement Solutions',
+                            text:'Secure your future with tailored retirement plans.'
+                        },
+                        {
+                            imgUrl:'imgs/wealth.png',
+                            title:'Wealth Preservation',
+                            text:'Protecting your wealth for generations to come.'
+                        },
+                    ]
+                    const servicesContainer = document.getElementById('services-inner-container')
+                    servicesArray.forEach((item,index)=>{
+                        servicesContainer.innerHTML += `
+                        <div id="col${index+1}" class="bg-themeColor md:h-60 xl:h-80 h-72 flex flex-col justify-between px-5 py-10 items-center rounded-md">
+                            <img src="${item.imgUrl}" class="w-20" alt="${item.title}">
+                            <h1 class="text-white text-center text-3xl font-extrabold">${item.title}</h1>
+                            <p class="text-white text-center">${item.text}</p>
+                        </div>
+                        `
+                    })
+                    
+                </script>
+            </div>
+
+            <a href="services" class=" hover:bg-themeColor hover:text-white transition-colors  border-themeColor lg:py-5 lg:px-16 px-12 py-3 text-themeColor border-2 uppercase font-bold rounded-md lg:text-xl  w-full sm:w-auto text-center flex justify-between gap-5 items-center">See More
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                  </svg>
+</a>
+            
+        </section>
+
+         <!-- investment section -->
+         <section id="investment" class="md:my-20 my-10 bg-themeColor flex flex-col px-5 md:gap-10 gap-5 justify-center items-center py-20">
+            <h1 class="text-white text-center text-3xl font-bold sm:text-5xl w-full  flex justify-center">Discover the Kings Capital Advantage</h1>
+
+            <div id="invest-inner-container" class=" grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 px-5 xl:px-80 w-screen">
+                <script>
+                    const investArray =[
+                        {
+                            imgUrl:'imgs/money.gif',
+                            title:'Financial Planning',
+                            text:'Personalized strategies for your financial goals.'
+                        },
+                        {
+                            imgUrl:'imgs/support.gif',
+                            title:'Investment Management',
+                            text:'Maximizing returns, minimizing risk.'
+                        },
+                        {
+                            imgUrl:'imgs/chart.gif',
+                            title:'Retirement Solutions',
+                            text:'Secure your future with tailored retirement plans.'
+                        },
+                        {
+                            imgUrl:'imgs/receipt.gif',
+                            title:'Wealth Preservation',
+                            text:'Protecting your wealth for generations to come.'
+                        },
+                    ]
+                    const investContainer = document.getElementById('invest-inner-container')
+                    investArray.forEach((item,index)=>{
+                        investContainer.innerHTML += `
+                        <div id="col${index+1}" class="bg-white md:h-60 xl:h-80 h-72 flex flex-col justify-between px-5 py-10 items-center rounded-md">
+                            <img src="${item.imgUrl}" class="w-20" alt="${item.title}">
+                            <h1 class="text-themeColor text-center text-3xl font-extrabold">${item.title}</h1>
+                            <p class="text-themeColor text-center">${item.text}</p>
+                        </div>
+                        `
+                    })
+                    
+                </script>
+            </div>
+
+            <a href="services" class=" hover:bg-white hover:text-themeColor transition-colors  border-white lg:py-5 lg:px-16 px-12 py-3 text-white border-2 uppercase font-bold rounded-lg lg:text-xl  w-full sm:w-auto text-center flex justify-between gap-5 items-center">See More
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                  </svg>
+
+            </a>
+            
+        </section>
+
+    
+    </main>
+
+    <footer id="footer" class="w-full">
+      <!-- coming from main.js -->
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kings Capital</title>
+    <link rel="shortcut icon" href="imgs/king-capital.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body class="font-poppins bg-slate-100 ">
+    <header id="header" class="relative flex justify-between p-8 lg:px-60 items-center">
+        <!-- coming from main.js -->
+    </header>
+
+    <main class="mw-screen overflow-x-hidden ">
+        <!-- hero section -->
+        <section id="hero" class=" relative  flex flex-col justify-center items-start overflow-hidden py-20 sm:py-44 lg:px-60 px-5 bg-gradient-to-tr from-teal-800 to-themeColor">
+            
+            <h1 class="text-white lg:text-6xl text-5xl font-semibold z-50 text-center sm:text-start flex gap-5 flex-col">
+                <span>BUILDING YOUR FUTURE</span>
+                <span>REALIZING YOUR VISION</span>
+                <span>LEAVING A LEGACY OF SUCCESS</span>
+            </h1>
+
+            <p class="mt-5 text-white lg:text-2xl text-l font-semibold z-50 text-center sm:text-start">Wealth Management Crafted by Kings Capital, For Your Financial Journey.</p>
+
+            <a href="contact" class="mt-5 hover:opacity-85 bg-slate-50 md:py-5 lg:px-16 px-7 py-3 text-themeColor uppercase font-bold rounded-sm md:text-xl z-50 w-full text-center sm:text-start sm:w-auto">Schedule a call</a>
+
+            <video autoplay loop muted src="imgs/video.mp4" class="absolute top-0 left-0 object-cover w-screen h-full mix-blend-multiply"></video>
+
+        </section>
+
+        <!-- about section -->
+        <section id="about" class="md:my-20 my-10 flex md:flex-row flex-col justify-start items-center xl:px-60 px-5 md:gap-10 gap-5">
+            <div id="about-image" class="md:w-6/12 h-full overflow-hidden">
+                <img src="imgs/portfolio5.jpg" alt="About Kings Capital" class=" object-cover">
+            </div>
+            <div id="about-content" class="flex flex-col items-start justify-start md:w-6/12">
+                <h1 class="text-themeColor xl:text-5xl font-bold lg:text-5xl text-3xl text-center sm:text-start">
+                    Empowering Your Financial Future: Discover the Legacy of Kings Capital
+                </h1>
+                <p class="text-gray-900 md:mt-10 mt-5 text-md lg:text-xl text-center sm:text-start">
+                    At Kings Capital, we leverage our decade-long expertise to craft tailored investment strategies that drive growth and deliver exceptional returns for our clients.
+                </p>
+                <p class="text-gray-900 mt-5 hidden md:block lg:text-xl text-md">
+                    We believe in
+                    empowering individuals and
+                    businesses to achieve their
+                    financial aspirations. With a
+                    legacy of excellence spanning
+                    decades, our firm is committed
+                    to providing comprehensive
+                    financial solutions tailored to
+                    your unique needs.
+                </p>
+                <a href="about" class="mt-8  hover:bg-themeColor hover:text-white transition-colors border-themeColor lg:py-5 lg:px-16 px-7 py-3 text-themeColor border-2 uppercase font-bold rounded-sm lg:text-xl w-full  text-center flex justify-between">Read More
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                      </svg>
+                </a>
+            </div>
+            
+        </section>
+
+        <!-- services section -->
+        <section id="services" class="my-20 flex flex-col md:gap-10 gap-5 justify-center items-center px-5 sm:px-0">
+            <h1 class="text-themeColor text-3xl font-bold sm:text-5xl w-full  flex justify-center">Our Services</h1>
+
+            <div id="services-inner-container" class=" grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 px-5 xl:px-80 w-screen">
+                <script>
+                    const servicesArray =[
+                        {
+                            imgUrl:'imgs/budget.png',
+                            title:'Financial Planning',
+                            text:'Personalized strategies for your financial goals.'
+                        },
+                        {
+                            imgUrl:'imgs/invest.png',
+                            title:'Investment Management',
+                            text:'Maximizing returns, minimizing risk.'
+                        },
+                        {
+                            imgUrl:'imgs/contribute.png',
+                            title:'Retirement Solutions',
+                            text:'Secure your future with tailored retirement plans.'
+                        },
+                        {
+                            imgUrl:'imgs/wealth.png',
+                            title:'Wealth Preservation',
+                            text:'Protecting your wealth for generations to come.'
+                        },
+                    ]
+                    const servicesContainer = document.getElementById('services-inner-container')
+                    servicesArray.forEach((item,index)=>{
+                        servicesContainer.innerHTML += `
+                        <div id="col${index+1}" class="bg-themeColor md:h-60 xl:h-80 h-72 flex flex-col justify-between px-5 py-10 items-center rounded-md">
+                            <img src="${item.imgUrl}" class="w-20" alt="${item.title}">
+                            <h1 class="text-white text-center text-3xl font-extrabold">${item.title}</h1>
+                            <p class="text-white text-center">${item.text}</p>
+                        </div>
+                        `
+                    })
+                    
+                </script>
+            </div>
+
+            <a href="services" class=" hover:bg-themeColor hover:text-white transition-colors  border-themeColor lg:py-5 lg:px-16 px-12 py-3 text-themeColor border-2 uppercase font-bold rounded-md lg:text-xl  w-full sm:w-auto text-center flex justify-between gap-5 items-center">See More
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                  </svg>
+</a>
+            
+        </section>
+
+         <!-- investment section -->
+         <section id="investment" class="md:my-20 my-10 bg-themeColor flex flex-col px-5 md:gap-10 gap-5 justify-center items-center py-20">
+            <h1 class="text-white text-center text-3xl font-bold sm:text-5xl w-full  flex justify-center">Discover the Kings Capital Advantage</h1>
+
+            <div id="invest-inner-container" class=" grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 px-5 xl:px-80 w-screen">
+                <script>
+                    const investArray =[
+                        {
+                            imgUrl:'imgs/money.gif',
+                            title:'Financial Planning',
+                            text:'Personalized strategies for your financial goals.'
+                        },
+                        {
+                            imgUrl:'imgs/support.gif',
+                            title:'Investment Management',
+                            text:'Maximizing returns, minimizing risk.'
+                        },
+                        {
+                            imgUrl:'imgs/chart.gif',
+                            title:'Retirement Solutions',
+                            text:'Secure your future with tailored retirement plans.'
+                        },
+                        {
+                            imgUrl:'imgs/receipt.gif',
+                            title:'Wealth Preservation',
+                            text:'Protecting your wealth for generations to come.'
+                        },
+                    ]
+                    const investContainer = document.getElementById('invest-inner-container')
+                    investArray.forEach((item,index)=>{
+                        investContainer.innerHTML += `
+                        <div id="col${index+1}" class="bg-white md:h-60 xl:h-80 h-72 flex flex-col justify-between px-5 py-10 items-center rounded-md">
+                            <img src="${item.imgUrl}" class="w-20" alt="${item.title}">
+                            <h1 class="text-themeColor text-center text-3xl font-extrabold">${item.title}</h1>
+                            <p class="text-themeColor text-center">${item.text}</p>
+                        </div>
+                        `
+                    })
+                    
+                </script>
+            </div>
+
+            <a href="services" class=" hover:bg-white hover:text-themeColor transition-colors  border-white lg:py-5 lg:px-16 px-12 py-3 text-white border-2 uppercase font-bold rounded-lg lg:text-xl  w-full sm:w-auto text-center flex justify-between gap-5 items-center">See More
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                  </svg>
+
+            </a>
+            
+        </section>
+
+        <!-- reviews section -->
+        <section id="reviews" class="md:my-20 my-10 flex md:flex-row flex-col justify-start items-center px-5 md:py-0 md:pr-5 md:px-0 md:gap-10 gap-5 md:w-10/12 m-auto  ">
+            <div id="reviews-image" class="md:w-6/12 h-full overflow-hidden">
+                <img src="imgs/contact-pic.jpg" alt="About Kings Capital" class=" object-cover">
+            </div>
+            <div id="reviews-content" class="flex flex-col items-start justify-start md:w-6/12">
+                <h1 class="text-themeColor xl:text-5xl font-bold lg:text-5xl text-3xl  text-center flex justify-center w-full">
+                    Client Testimonials
+                </h1>
+                <p class="text-gray-900 md:mt-10 mt-5 text-md lg:text-xl text-center flex justify-center w-full">
+                    At Kings Capital, we take pride in our clients' success stories. Here are just a few testimonials from individuals who have experienced the difference our personalized financial services can make:
+                </p>
+                <ul id="extra-list-inner" class="mt-4 flex flex-col  w-full gap-3">
+                   <script>
+                    const extraListItems = [
+                        `I never knew investing could be this easy. <strong class="text-themeColor">Kings Capital</strong> made it simple and effective.`,
+                        `With <strong class="text-themeColor">Kings Capital</strong>, I feel confident about my financial future. Thank you for the peace of mind!`,
+                        `The team at <strong class="text-themeColor">Kings Capital</strong> truly cares about their clients' success. I couldn't be happier with their service.`,
+                        `<strong class="text-themeColor">Kings Capital</strong> helped me navigate through tough financial decisions with ease. Highly recommend!`
+                    ]
+
+                    const listContainer = document.getElementById('extra-list-inner')
+
+                    extraListItems.forEach((item,index)=>{
+                        listContainer.innerHTML += `
+                        <li class="text-gray-900 flex items-center w-full gap-2 sm:flex-row flex-col text-center sm:text-start sm:border-0 border-2 border-themeColor p-5 sm:p-0">
+                            <span class="bg-themeColor w-4 text-white rounded-full h-4 p-5 flex justify-center items-center">${index+1}</span>
+                            
+                            <p>${item}</p>
+
+                        </li>
+                        `
+                    })
+                   </script>
+                </ul>
+                <a href="about" class="mt-8  hover:bg-themeColor hover:text-white transition-colors  border-themeColor lg:py-5 lg:px-16 px-7 py-3 text-themeColor border-2 uppercase font-bold rounded-sm lg:text-xl w-full flex justify-between">
+                    Read More
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                      </svg>
+                      
+                </a>
+
+               
+            </div>
+            
+        </section>
+
+        <!-- disclaimer section -->
+        <section id="disclaimer" class="flex flex-col gap-5 justify-center xl:px-44 px-5 mb-10">
+            <h1 class="text-themeColor sm:text-5xl font-semibold text-3xl w-full text-start sm:text-center">
+                Disclaimer
+            </h1>
+            <h3 class="text-themeColor sm:text-xl text-l font-semibold text-start">General Disclaimer</h3>
+            <p class="text-gray-900">
+                The information provided on this website is for general informational purposes only and should not be construed as financial advice. While we strive to keep the information up to date and accurate, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose. Any reliance you place on such information is therefore strictly at your own risk. In no event will we be liable for any loss or damage including without limitation, indirect or consequential loss or damage, or any loss or damage whatsoever arising from loss of data or profits.
+            </p>
+
+            <h3 class="text-themeColor sm:text-xl text-l font-semibold text-start">Financial Disclaimer</h3>
+            <p class="text-gray-900">
+                The content provided on this platform is for informational purposes only and does not constitute financial advice. While we strive to provide accurate and up-to-date information, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the information contained herein. Any reliance you place on such information is strictly at your own risk. We are not liable for any financial loss, damage, or inconvenience arising from the use of, or reliance on, the information provided. It is recommended that you consult with a qualified financial advisor before making any investment decisions.
+            </p>
+        </section>
+    </main>
+
+    <footer id="footer" class="w-full">
+      <!-- coming from main.js -->
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

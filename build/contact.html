@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kings Capital</title>
+    <link rel="shortcut icon" href="imgs/king-capital.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+    #call-footer{
+        display: none;
+    }
+</style>
+</head>
+<body class="font-poppins bg-slate-100 ">
+    <header id="header" class="relative flex justify-between p-8 lg:px-60 items-center">
+        <!-- coming from main.js -->
+        
+    </header>
+
+    <main class="mw-screen overflow-x-hidden ">
+       <!-- hero section -->
+       <section id="hero" class=" relative  flex flex-col justify-center items-start overflow-hidden py-20 sm:py-44 lg:px-60 px-5 bg-gradient-to-tr from-teal-800 to-themeColor ">
+            
+        <h1 class="text-white lg:text-6xl text-5xl font-semibold z-50 text-center w-full flex gap-5 flex-col">
+            <span>SCHEDULE A CALL</span>
+        </h1>
+
+        <div class="bg-white z-50 mt-10 m-auto grid grid-cols-1 sm:grid-cols-2  md:max-w-xl lg:max-w-5xl xl:max-w-7xl  shadow-lg rounded-xl">
+          <form class="px-5 py-10  sm:p-10  ">
+            <h1 class="sm:block hidden text-3xl text-themeColor mb-3">Get in touch</h1>
+            <p class="mb-6 sm:block hidden ">Have a question or inquiry? Feel free to reach out to us using the form below. We're here to assist you with any financial needs or concerns you may have. </p>
+            <div class="flex flex-wrap -mx-3 mb-6 p-15">
+              <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                <label class="block uppercase tracking-wide text-themeColor text-xs font-bold mb-2" for="grid-first-name">
+                  First Name
+                </label>
+                <input class="appearance-none block w-full bg-gray-200 text-teal-700 rounded py-3 px-4 mb-3 leading-tight focus:outline-none border focus:bg-white focus:border-teal-600" name="first_name" id="grid-first-name" type="text" >
+                <p class="text-red-500 text-xs italic opacity-0 hidden">Please fill out this field.</p>
+              </div>
+              <div class="w-full md:w-1/2 px-3">
+                <label class="block uppercase tracking-wide text-themeColor text-xs font-bold mb-2" for="grid-last-name">
+                  Last Name
+                </label>
+                <input class="appearance-none block w-full bg-gray-200 text-teal-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-teal-600" id="grid-last-name" name="last_name" type="text" >
+                <p class="text-red-500 text-xs italic opacity-0 hidden">Please fill out this field.</p>
+              </div>
+            </div>
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full px-3">
+                <label class="block uppercase tracking-wide text-themeColor text-xs font-bold mb-2" for="grid-email">
+                  Email
+                </label>
+                <input class="appearance-none block w-full bg-gray-200 text-teal-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-teal-600" id="grid-email" type="email" pattern="^\w@\w{3}\.com" name="email">
+                <p class="text-red-500 text-xs italic opacity-0 hidden">Please fill out this field.</p>
+              </div>
+            </div>
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full md:w-full px-3 mb-6 md:mb-0">
+                <label class="block uppercase tracking-wide text-themeColor text-xs font-bold mb-2" for="grid-city">
+                  Phone
+                </label>
+                <input class="appearance-none block w-full bg-gray-200 text-teal-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-teal-600" name="phone" id="grid-city" type="number" >
+                <p class="text-red-500 text-xs italic opacity-0 hidden">Please fill out this field.</p>
+              </div>
+           
+            </div>
+            <div class="flex flex-wrap -mx-3 mb-6">
+             
+              <div class="w-full md:w-full px-3 mb-6 md:mb-0">
+                <label class="block uppercase tracking-wide text-themeColor text-xs font-bold mb-2" for="grid-state">
+                  Deal Type
+                </label>
+                <div class="relative">
+                  <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-sm text-teal-900 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state" name="deal_type">
+                    <option value="">Select a deal</option>
+                    <option value="Developnment">Developnment</option>
+                    <option value="Insurance">Insurance</option>
+                    <option value="Design/Build">Design/Build</option>
+                    <option value="Real Estate">Real Estate</option>
+                  </select>
+                  <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                  </div>
+                </div>
+              </div>
+             
+            </div>
+            <div class="flex flex-wrap -mx-3 mb-2">
+              <div class="w-full md:w-full px-3 mb-6 md:mb-0">
+                <label class="block uppercase tracking-wide text-themeColor text-xs font-bold mb-2" for="grid-addinfo">
+                  Additional Information
+                </label>
+                <textarea class="appearance-none block w-full bg-gray-200 text-teal-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-teal-600" id="grid-addinfo" rows="5" name="additional_info"></textarea>
+                <p class="text-red-500 text-xs italic opacity-0 hidden">Please fill out this field.</p>
+              </div>
+           
+            </div>
+            <button type="submit" class="mt-3 sm:mt-8  hover:bg-themeColor hover:text-white transition-colors  border-themeColor lg:py-3 lg:px-16 px-7 py-3 text-themeColor border-2 uppercase font-bold rounded-sm lg:text-l w-full flex justify-between">
+              Send
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>
+                
+            </button>
+          </form>
+          <div id="info-container" class="hidden sm:block">
+            <img src="imgs/contact-pic.jpg" alt="Contact Us" class="rounded-e-lg w-full h-full object-cover">
+          </div>
+        </div>
+       
+
+        <video autoplay loop muted src="imgs/video.mp4" class="absolute top-0 left-0 object-cover w-screen h-full mix-blend-multiply blur-sm"></video>
+
+    </section>
+
+    
+
+    </main>
+
+    <footer id="footer" class="w-full">
+      <!-- coming from main.js -->
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
